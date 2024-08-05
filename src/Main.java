@@ -147,12 +147,14 @@ public class Main {
     которая вычисляет, какое из трех чисел бо́льшее, и выводит результат в консоль.
      */
         System.out.println("Задача 7");
-        System.out.println("Введите три числа(через ENTER):");
+        System.out.print("Введите первое число:");
         Scanner one1 = new Scanner(System.in);
-        Scanner two2 = new Scanner(System.in);
-        Scanner three3 = new Scanner(System.in);
         int one = one1.nextInt();
+        System.out.print("Введите второе число:");
+        Scanner two2 = new Scanner(System.in);
         int two = two2.nextInt();
+        System.out.print("Введите третье число:");
+        Scanner three3 = new Scanner(System.in);
         int three = three3.nextInt();
         if ( one > two && one > three ){
             System.out.println("Число " + one + " больше других чисел.");
