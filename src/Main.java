@@ -5,91 +5,99 @@ public class Main {
         task3();
         task4();
         task5();
-        task6();
-        task7();
+
     }
     public static void task1(){
 
-        byte age = 15;
-        if ( age >= 18 ) {
-            System.out.println ("Если возраст человека равен " + age + ", то он совершеннолетний.");
-        }else {
-            System.out.println ("Если возраст человека равен " + age + ", то он не достиг совершеннолетия, нужно немного подождать.");
+        byte clientOS = 0;
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
 
     public static void task2(){
 
-        byte degrees = 6;
-        if ( degrees < 5 ){
-            System.out.println("На улице " + degrees + " градусов, нужно надеть шапку.");
-        }else {
-            System.out.println("На улице " + degrees + " градусов, можно идти без шапки.");
+        byte clientOS = 0;
+        int clientDeviceYear = 2015;
+        if (clientDeviceYear < 2015 && clientOS == 0) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear >= 2015 && clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear < 2015 && clientOS == 1) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientDeviceYear >= 2015 && clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
 
     public static void task3(){
 
-        byte speed = 50;
-        if ( speed > 60 ){
-            System.out.println("Если скорость " + speed + " км/ч, то придется заплатить штраф.");
-        }else {
-            System.out.println("Если скорость " + speed + " км/ч, то можно ездить спокойно.");
+        int year = 2015;
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+            System.out.println(year + " год является високосным");
+        else {
+            System.out.println(year + " год не является високосным");
         }
     }
 
-    public static void task4(){
+    public static void task4() {
 
-        byte age = 15;
-        if ( age > 2 && age <= 6 ){
-            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в детский сад.");
-        } else if ( age >= 7 && age <= 17 ) {
-            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в школу.");
-        } else if ( age >= 18 && age <= 24 ) {
-            System.out.println("Если возраст человека равен " + age + ", то его место в университете.");
-        } else if ( age > 24 ) {
-            System.out.println("Если возраст человека равен " + age + ", то ему пора ходить на работу.");
+        int deliveryDistance = 95;
+        if (deliveryDistance < 20) {
+            System.out.println("Потребуется 1 день");
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            System.out.println("Потребуется 2 дня");
+        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется 3 дня");
+        } else if (deliveryDistance > 100) {
+            System.out.println("Доставки нет");
         }
     }
 
     public static void task5(){
 
-        byte age = 12;
-        if ( age < 5 ){
-            System.out.println("Если возраст ребенка равен " + age + ", то ему нельзя кататься на аттракционе.");
-        } else if ( age >= 5 && age < 14 ) {
-            System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе в сопровождении взрослого.");
-        } else if (age >= 14) {
-            System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе без сопровождения взрослого.");
-        }
-    }
-
-    public static void task6(){
-
-        int passengers = 20;
-        int total = 102;
-        int sit = 60;
-        int standing = total - sit;
-        if ( passengers < sit ){
-            System.out.println("В вагоне есть " + ( sit - passengers ) + " сидячих мест и " + standing + " стоячих мест.");
-        }else if ( passengers >= sit && passengers < total ){
-            System.out.println("В вагоне нет сидячих мест, но есть " + ( total - passengers ) + " стоячих мест.");
-        }else {
-            System.out.println("Мест нет!");
-        }
-    }
-
-    public static void task7(){
-
-        int one = 5;
-        int two = 7;
-        int three = 12;
-        if ( one > two && one > three ){
-            System.out.println("Число " + one + " больше других чисел.");
-        } else if ( two > one && two > three ) {
-            System.out.println("Число " + two + " больше других чисел.");
-        } else {
-            System.out.println("Число " + three + " больше других чисел.");
+        int monthNumber = 12;
+        switch (monthNumber) {
+            case 1:
+                System.out.println("Январь-принадлежит к сезону зима");
+                break;
+            case 2:
+                System.out.println("Февраль-принадлежит к сезону зима");
+                break;
+            case 3:
+                System.out.println("Март-принадлежит к сезону весна");
+                break;
+            case 4:
+                System.out.println("Апрель-принадлежит к сезону весна");
+                break;
+            case 5:
+                System.out.println("Май-принадлежит к сезону весна");
+                break;
+            case 6:
+                System.out.println("Июнь-принадлежит к сезону лето");
+                break;
+            case 7:
+                System.out.println("Июль-принадлежит к сезону лето");
+                break;
+            case 8:
+                System.out.println("Август-принадлежит к сезону лето");
+                break;
+            case 9:
+                System.out.println("Сентябрь-принадлежит к сезону осень");
+                break;
+            case 10:
+                System.out.println("Октябрь-принадлежит к сезону осень");
+                break;
+            case 11:
+                System.out.println("Ноябрь-принадлежит к сезону осень");
+                break;
+            case 12:
+                System.out.println("Декабрь-принадлежит к сезону зима");
+                break;
+            default:
+                System.out.println("Такого месяца не существует");
         }
     }
 }
